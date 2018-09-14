@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>EGGC Navbar</title>
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="grid.css">
+    <style>
+        body {
+            background: url('BG_new.png');
+            background-position: fixed;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid" id="navParent">
+        <!-- NEW NAVBAR -->
+        <nav class="navbar" id="myNavbar">
+            <a href="https://slotkorea.com" id="logo">
+                <img src="new-logo.png">
+            </a>
+            <span id="navbar-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </span>
+            <ul id="main-nav">
+                <li>
+                    <a href="https://www.eggckr.com/hall-of-fame/" class="nav-links">
+                        <img class="screw" src="icons/screw.png" alt="">
+                        <img class="screw2" src="icons/screw.png" alt="">
+                        <img class="screw3" src="icons/screw.png" alt="">
+                        <img class="screw4" src="icons/screw.png" alt="">
+                        <img class="nav-icon trophy" src="icons/trophy.png" alt="">
+                        <span class="text">명예의전당</span>
+                        <div class="cp1"></div>
+                        <div class="cp2"></div>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.eggckr.com/vip-programs/" class="nav-links">
+                        <img class="screw" src="icons/screw.png" alt="">
+                        <img class="screw2" src="icons/screw.png" alt="">
+                        <img class="screw3" src="icons/screw.png" alt="">
+                        <img class="screw4" src="icons/screw.png" alt="">
+                        <img class="nav-icon crown" src="icons/crown.png" alt="">
+                        <span class="text">VIP프로그램</span>
+                        <div class="cp1"></div>
+                        <div class="cp2"></div>
+                    </a>
+                </li>
+                <li>
+                    <a data-toggle="modal" data-target="#transaction-modal" data-tab="bonus" class="nav-links">
+                        <img class="screw" src="icons/screw.png" alt="">
+                        <img class="screw2" src="icons/screw.png" alt="">
+                        <img class="screw3" src="icons/screw.png" alt="">
+                        <img class="screw4" src="icons/screw.png" alt="">
+                        <img class="nav-icon bank" src="icons/gift.png" alt="">
+                        <span class="text">보너스</span>
+                        <div class="cp1"></div>
+                        <div class="cp2"></div>
+                    </a>
+                </li>
+                <li class="new-deposit">
+                    <a class="nav-links" data-toggle="modal" data-target="#login-modal" data-tab="deposit">
+                        <img class="screw" src="icons/screw.png" alt="">
+                        <img class="screw2" src="icons/screw.png" alt="">
+                        <img class="screw3" src="icons/screw.png" alt="">
+                        <img class="screw4" src="icons/screw.png" alt="">
+                        <img class="nav-icon gift" src="icons/piggy_bank.png" alt="">
+                        <span class="text">입금</span>
+                        <div class="cp1"></div>
+                        <div class="cp2"></div>
+                    </a>
+                </li>
+                <li class="new-withdraw">
+                    <a class="nav-links" data-toggle="modal" data-target="#login-modal" data-tab="withdrawal">
+                        <img class="screw" src="icons/screw.png" alt="">
+                        <img class="screw2" src="icons/screw.png" alt="">
+                        <img class="screw3" src="icons/screw.png" alt="">
+                        <img class="screw4" src="icons/screw.png" alt="">
+                        <img class="nav-icon money" src="icons/money.png" alt="">
+                        <span class="text">출금</span>
+                        <div class="cp1"></div>
+                        <div class="cp2"></div>
+                    </a>
+                </li>
+                <li class="new-chat">
+                    <a class="nav-links open-liveperson" onclick="LC_API.open_chat_window();">
+                        <img class="screw" src="icons/screw.png" alt="">
+                        <img class="screw2" src="icons/screw.png" alt="">
+                        <img class="screw3" src="icons/screw.png" alt="">
+                        <img class="screw4" src="icons/screw.png" alt="">
+                        <img class="nav-icon chat" src="icons/chat.png" alt="">
+                        <span class="text">고객센터</span>
+                        <div class="cp1"></div>
+                        <div class="cp2"></div>
+                    </a>
+                </li>
+                <li class="new-login">
+                    <a class="nav-links" data-toggle="modal" data-target="#login-modal">
+                        <img class="screw" src="icons/screw.png" alt="">
+                        <img class="screw2" src="icons/screw.png" alt="">
+                        <img class="screw3" src="icons/screw.png" alt="">
+                        <img class="screw4" src="icons/screw.png" alt="">
+                        <img class="nav-icon account" src="icons/account.png" alt="">
+                        <span class="text">로그인</span>
+                        <div class="cp1-login"></div>
+                        <div class="cp2-login"></div>
+                    </a>
+                </li>
+                <li class="new-register">
+                    <a class="nav-links" data-toggle="modal" data-target="#registration-modal">
+                        <img class="screw" src="icons/screw.png" alt="">
+                        <img class="screw2" src="icons/screw.png" alt="">
+                        <img class="screw3" src="icons/screw.png" alt="">
+                        <img class="screw4" src="icons/screw.png" alt="">
+                        <img class="nav-icon sheet" src="icons/sheet.png" alt="">
+                        <span class="text">회원가입</span>
+                        <div class="cp1-register"></div>
+                        <div class="cp2-register"></div>
+                    </a>
+                </li>
+
+                <!-- These two comment menu list is for logged in user -->
+
+                <!-- <li class="new-user-profile">
+                            <a class="nav-links">
+                                <img class="screw" src="icons/screw.png" alt="">
+                                <img class="screw2" src="icons/screw.png" alt="">
+                                <img class="screw3" src="icons/screw.png" alt="">
+                                <img class="screw4" src="icons/screw.png" alt="">
+                                <img class="nav-icon profile" src="icons/profile.png" alt="">
+                                <span class="text">회원 정보</span>
+                                <div class="cp1-profile"></div>
+                                <div class="cp2-profile"></div>
+                            </a>
+                        </li>
+                        <li class="new-user-logout">
+                            <a class="nav-links">
+                                <img class="screw" src="icons/screw.png" alt="">
+                                <img class="screw2" src="icons/screw.png" alt="">
+                                <img class="screw3" src="icons/screw.png" alt="">
+                                <img class="screw4" src="icons/screw.png" alt="">
+                                <img class="nav-icon logout" src="icons/logout.png" alt="">
+                                <span class="text">로그아웃</span>
+                                <div class="cp1-logout"></div>
+                                <div class="cp2-logout"></div>
+                            </a>
+                        </li> -->
+            </ul>
+        </nav>
+        <!-- END NAVBAR -->
+    </div>
+    <script src="new-menu.js"></script>
+    <script src="navScroll.js"></script>
+</body>
+
+</html>
